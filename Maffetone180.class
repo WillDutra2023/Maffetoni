@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package maffetone180;
+
+/**
+ *
+ * @author patati
+ */
+public class Maffetone180 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+
+    public int calcularMaxCardiaco(int idade, boolean convalescente, boolean sedentario, boolean ativoConstipado, boolean ativo) {
+        
+        int maxCardiaco = 180-idade;
+        
+        if(convalescente)
+            maxCardiaco=maxCardiaco-10;
+        
+        if(sedentario)
+            maxCardiaco=maxCardiaco-5;
+        
+        if(ativoConstipado)
+            maxCardiaco=maxCardiaco-0;
+            
+        if(ativo)
+            maxCardiaco=maxCardiaco+5;
+                    
+       return maxCardiaco;             
+
+    }
+
+    public int calcularMinCardiaco(int maxCardiaco) {
+        return maxCardiaco-10;
+    }
+
+
+    
+}
